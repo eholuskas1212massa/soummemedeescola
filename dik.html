@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misseia's crazy?</title>
+    <style>
+        body{
+            font-family: MS Comic Sans, Comic Sans, cursive;
+            margin: 0;
+            background-color: aquamarine;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            margin-bottom: 20%;
+            font-size: 36pt;
+            padding: 5px;
+            color: rgb(247, 177, 97);
+            border: 6px solid rgb(247, 177, 97);
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+        button{
+            position: absolute;
+            font-size: 24pt;
+            padding: 10px, 10px;
+            border-radius: 5px;
+            background-color: aliceblue;
+            color: rgb(20, 114, 117);
+            border: 2px rgb(20, 114, 117) solid;
+        }
+        P{
+            position: absolute;
+            margin-bottom: 10%;
+            font-size: 14pt;
+            color: rgb(20, 114, 117);
+        }
+        #yes{
+            margin-left: -11%;
+        }
+        #no{
+            margin-left: 9%;
+            margin-top: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="cherodecu">
+        <h1 id="missa">misseia eh malukinha da cabesa?</h1>
+        <p id="estoyloco"></p>
+        <button id="yes" onclick="eladissesim()">sim</button><button id="no" onmouseover="chupacu()">não</button>
+    </div>
+    <script>
+        var nao = document.getElementById("no");
+        var sim = document.getElementById("yes");
+        var hei = document.getElementById("missa");
+        var ja = false
+        function chupacu(){
+            var eskerda = Math.floor(Math.random() * 100);
+            var eskerdareal = eskerda * (Math.round(Math.random()) ? 1 : -1);
+            var tope = Math.floor(Math.random() * 50);
+            var topereal = tope * (Math.round(Math.random()) ? 1 : -1);
+            console.log(eskerdareal);
+            console.log(topereal)
+            nao.style.marginLeft = eskerdareal.toString() + "%";
+            nao.style.marginTop = topereal.toString() + "%";
+        }
+        function eladissesim(){
+            if (ja == false){
+                nao.remove();
+                sim.style.marginLeft = "0%";
+                sim.innerText = "você está correto !!";
+                hei.innerText = "misseia eh malukinha da cabesa!!";
+                document.getElementById("estoyloco").innerText = "a karol e o igor tambem estao enlouquecendo !! 😂😂😂"
+                ja = true;
+            }
+        }
+    </script>
+</body>
+</html>
